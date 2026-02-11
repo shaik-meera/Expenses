@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Page */
+body {
+  margin: 0;
+  background-image: url("./WhatsApp\ Image\ 2026-01-09\ at\ 11.57.06\ AM.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #3e6398;
+}
+
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin: 0 0 35px 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Card */
+.box {
+  background: hsl(0, 5%, 89%);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Card heading */
+.box h2 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+/* Default buttons (for Add / Save etc.) */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+th {
+  background: #1f2937;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Date filter */
+input[type="date"] {
+  max-width: 200px;
+  margin-bottom: 12px;
+}
+
+/* Total */
+h3 {
+  margin-top: 20px;
+  padding: 14px;
+  background: #eef2ff;
+  color: #1e3a8a;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Panels */
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-panel {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel {
+  flex: 1;
+}
+
+/* -------- Login page (small centered box) -------- */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-box {
+  width: 360px;
+  max-width: 95vw;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.login-box h2 {
+  margin: 0 0 18px 0;
+  color: #1e3a8a;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* override global input for login only */
+.login-box input {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.login-hint {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ✅ PAGE WRAPPER FOR LOGOUT BUTTON */
+.page-container {
+  position: relative;   /* anchor for absolute logout */
+  min-height: 100vh;
+  padding-top: 60px;    /* space so logout doesn't overlap title/content */
+}
+
+/* ✅ LOGOUT BUTTON (top-right, scrolls with page) */
+.exit-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  width: auto;          /* IMPORTANT: stop global button 100% */
+  padding: 6px 14px;
+  border-radius: 5px;
+
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.exit-btn:hover {
+  background-color: #d93638;
+}
